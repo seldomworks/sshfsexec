@@ -193,7 +193,7 @@ def main(configcode=''):
         executed = listtoshc([command] + remoteargs)
 
         # Prepend environment variable declarations
-        for variable, value in envpassthrough.iteritems():
+        for variable, value in envpassthrough.items():
             executed = '%s=%s %s' % (variable, pipes.quote(value), executed)
 
         if cwdtranslation:
